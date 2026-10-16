@@ -1,0 +1,50 @@
+/* Edit text, organizers, and talks in the HTML files, not here.
+   This stylesheet controls colors, layout, and typography. */
+:root { color-scheme: light; --navy: #314366; --ink: #252b34; --muted: #5b6370; --line: #ccd0d6; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #f0f0f0; color: var(--ink); font-family: Arial, Helvetica, sans-serif; font-size: 1rem; line-height: 1.65; }
+a { color: #194eaa; text-underline-offset: .2em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid #3e73c9; outline-offset: 5px; }
+.skip-link { position: absolute; left: 1rem; top: -5rem; z-index: 20; padding: .5rem 1rem; background: white; }
+.skip-link:focus { top: .5rem; }
+.nav-wrap { background: var(--navy); color: white; }
+nav { max-width: 1200px; min-height: 70px; margin: auto; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; }
+.site-title { color: white; text-decoration: none; font-size: 1.3rem; font-weight: 600; line-height: 1.35; }
+.nav-links { display: flex; flex-wrap: wrap; list-style: none; padding: 0; margin: 0; gap: 1.7rem; }
+.nav-links a { color: white; text-decoration: none; font-size: 1rem; padding: .35rem 0; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { border-bottom: 2px solid white; }
+main { max-width: 1200px; margin: 0 auto; padding: 2.4rem 1.5rem 3rem; min-height: 440px; }
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; margin-bottom: 2.5rem; }
+h1, h2, h3 { line-height: 1.35; color: var(--navy); }
+h1 { font-size: 1.8rem; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 0 0 1rem; }
+h3 { font-size: 1.05rem; margin: 0 0 .5rem; }
+p { margin: 0 0 1rem; }
+.next-talk { border-left: 1px solid var(--line); padding-left: 2.5rem; }
+.next-talk h2 { color: #923333; }
+.empty-state { color: var(--muted); }
+.organizers-section { margin-bottom: 1.5rem; }
+.organizers { margin: 0; padding-left: 1.25rem; }
+.interests { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.interests ul { padding-left: 1.25rem; }
+.interests li { margin-bottom: .45rem; }
+.subscribe-line { margin-top: 1.5rem; }
+.subscribe-line a { overflow-wrap: anywhere; }
+.talk-page { max-width: 940px; }
+.talk-page > h1 { padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
+.talk { margin: 2rem 0; padding-bottom: 1.5rem; border-bottom: 1px solid var(--line); }
+.talk h2 { margin-bottom: .6rem; }
+.talk-date { color: #923333; font-weight: 600; }
+.references { margin: 2rem 0; padding-left: 1.25rem; }
+.references li { margin-bottom: .8rem; }
+footer { max-width: 1200px; margin: auto; padding: 1rem 1.5rem 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+@media (max-width: 800px) {
+  nav { flex-wrap: wrap; gap: .75rem; }
+  .nav-links { width: 100%; gap: .5rem 1.5rem; }
+  main { padding: 1.8rem 1.25rem 2rem; }
+  .intro-grid { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+  .next-talk { border-left: 0; border-top: 1px solid var(--line); padding: 1.5rem 0 0; }
+}
+@media (prefers-reduced-motion: no-preference) { a { transition: background-color .15s; } }
+@media print { .nav-wrap, footer { display: none; } main { max-width: none; padding: 0; } }
