@@ -1,0 +1,2 @@
+# aimmathwinseminar
+AI MathWin Seminar
