@@ -25,34 +25,51 @@
   </header>
 
   <main id="main" tabindex="-1">
-    <section id="home" aria-labelledby="home-heading">
+    <section id="home" class="home-page" aria-labelledby="home-heading">
       <div class="intro-grid">
         <div>
+          <p class="eyebrow">A collaborative research seminar</p>
           <h1 id="home-heading">AI MathWin Seminar</h1>
           <!-- EDIT THE INTRODUCTION: Change the text between <p> and </p> below.
                Keep each paragraph between its own <p>...</p> tags. -->
           <p>The AI MathWin Seminar brings researchers and students together to discuss artificial intelligence and mathematics.</p>
           <p>Find seminar announcements here, browse previous talks, and use the references page for related material.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="previous-talks.html">Explore previous talks <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="references.html">Browse references</a>
+          </div>
         </div>
-        <aside class="next-talk" aria-labelledby="next-talk-heading">
-          <h2 id="next-talk-heading">Next talk</h2>
-          <!-- HOW TO ANNOUNCE THE NEXT TALK:
-               1. Delete the single placeholder <p> line immediately below.
-               2. Copy the example lines below, but place them OUTSIDE this comment.
-               3. Replace the CAPITALIZED placeholders with your information.
-               4. When the talk has happened, add it to previous-talks.html.
-
-               <p><strong>Title:</strong> TALK TITLE</p>
-               <p><strong>Speaker(s):</strong> NAME (AFFILIATION)</p>
-               <p><strong>Date and time:</strong> DAY MONTH YEAR, TIME</p>
-               <p><strong>Location / meeting link:</strong> ROOM OR ONLINE LINK</p>
-               <p><strong>Abstract:</strong> SHORT DESCRIPTION (optional)</p>
-          -->
-          <p class="empty-state">"Symbolic value and automatization: children and machines can do math!" by Pr. Marcello Vitali-Rosati (Université de Montréal).</p>
+        <aside class="next-talk surface-card" aria-label="Next talk announcement">
+          <p class="eyebrow">Next talk</p>
+          <article class="talk-card">
+            <h2>Symbolic value and automatization: children and machines can do math!</h2>
+            <p class="speaker-line"><span class="speaker-name">Marcello Vitali-Rosati</span><span class="speaker-affiliation">Université de Montréal</span></p>
+            <p class="talk-date"><span class="date-label">Date &amp; time</span><time datetime="2026-10-23T17:00:00+02:00">23 October 2026 · 5:00 p.m. Paris time</time></p>
+            <details class="talk-description">
+              <summary>Talk description</summary>
+              <div class="description-content"><p>Talk description will be added.</p></div>
+            </details>
+          </article>
+          <div class="meeting-link-box">
+            <div>
+              <p class="eyebrow">Join online</p>
+              <p class="meeting-note">Open the meeting room at the scheduled time.</p>
+            </div>
+            <a class="button button-primary" href="https://visio.numerique.gouv.fr/miz-lomr-bkv" target="_blank" rel="noopener noreferrer">Join the meeting <span aria-hidden="true">↗</span></a>
+          </div>
+          <!-- HOW TO UPDATE THE NEXT TALK:
+               1. Edit the title, speaker, affiliation, date and time, and description above.
+               2. Change both the visible date and the time in the datetime attribute.
+               3. Put the meeting URL only in the button's href. The URL stays hidden
+                  behind the “Join the meeting” button.
+               4. After the talk, copy the complete <article class="talk-card">...</article>
+                  block and paste it at the top of previous-talks.html. The article has
+                  the same format on both pages. Leave the meeting-link box on this page. -->
         </aside>
       </div>
 
-      <section id="organizers" class="organizers-section" aria-labelledby="organizers-heading">
+      <section id="organizers" class="organizers-section surface-card" aria-labelledby="organizers-heading">
+        <p class="eyebrow">The people behind the seminar</p>
         <h2 id="organizers-heading">Organizers</h2>
         <ul class="organizers">
           <!-- HOW TO ADD AN ORGANIZER:
@@ -68,7 +85,8 @@
         </ul>
       </section>
 
-      <section class="interests" aria-labelledby="interests-heading">
+      <section class="interests surface-card" aria-labelledby="interests-heading">
+        <p class="eyebrow">What we explore</p>
         <h2 id="interests-heading">Our interests</h2>
         <ul>
           <!-- HOW TO ADD AN INTEREST: copy a <li>...</li> line and edit its text.
